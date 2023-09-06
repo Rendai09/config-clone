@@ -15,3 +15,4 @@ https://github.com/thomasasfk/sd-webui-aspect-ratio-helper.git
 https://github.com/vladmandic/sd-extension-system-info.git
 https://github.com/Rendai09/supermerger.git
 https://github.com/richrobber2/canvas-zoom.git
+https://github.com/BlafKing/sd-civitai-browser-plus
