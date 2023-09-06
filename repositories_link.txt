@@ -10,7 +10,6 @@ https://github.com/Uminosachi/sd-webui-inpaint-anything
 https://github.com/Bing-su/adetailer.git
 https://github.com/NextDiffusion/next-diffusion-prompt-generator.git
 https://github.com/fkunn1326/openpose-editor.git
-https://github.com/Rendai09/composable-lora.git
 https://github.com/IDEA-Research/DWPose.git
 https://github.com/alemelis/sd-webui-ar.git
 https://github.com/thomasasfk/sd-webui-aspect-ratio-helper.git
