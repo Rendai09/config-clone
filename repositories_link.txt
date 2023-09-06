@@ -1,4 +1,4 @@
-https://github.com/AUTOMATIC1111/stable-diffusion-webui
+https://github.com/phamhungd/SDVN
 https://github.com/Mikubill/sd-webui-controlnet
 https://github.com/camenduru/sd-webui-tunnels
 https://github.com/ashen-sensored/stable-diffusion-webui-two-shot.git
