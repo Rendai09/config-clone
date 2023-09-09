@@ -18,3 +18,4 @@ https://github.com/richrobber2/canvas-zoom
 https://github.com/BlafKing/sd-civitai-browser-plus
 https://github.com/yankooliveira/sd-webui-photopea-embed
 https://github.com/AUTOMATIC1111/stable-diffusion-webui-rembg.git
+https://github.com/Coyote-A/ultimate-upscale-for-automatic1111.git
