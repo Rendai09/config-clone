@@ -18,3 +18,4 @@ https://github.com/ParisNeo/prompt_translator
 https://github.com/AIrjen/OneButtonPrompt
 https://github.com/phamhungd/sd-webui-lora-block-weight
 https://github.com/hako-mikan/sd-webui-regional-prompter
+https://github.com/s0md3v/sd-webui-roop
