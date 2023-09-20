@@ -8,7 +8,6 @@ https://github.com/DominikDoom/a1111-sd-webui-tagcomplete
 https://github.com/zanllp/sd-webui-infinite-image-browsing
 https://github.com/Uminosachi/sd-webui-inpaint-anything
 https://github.com/Bing-su/adetailer
-https://github.com/NextDiffusion/next-diffusion-prompt-generator
 https://github.com/fkunn1326/openpose-editor.git
 https://github.com/alemelis/sd-webui-ar
 https://github.com/thomasasfk/sd-webui-aspect-ratio-helper
