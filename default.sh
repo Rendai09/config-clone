@@ -14,6 +14,7 @@ PIP_PACKAGES=(
 
 EXTENSIONS=(
     "https://github.com/Mikubill/sd-webui-controlnet"
+    "https://github.com/Bing-su/adetailer.git"
     "https://github.com/zanllp/sd-webui-infinite-image-browsing"
     "https://github.com/hako-mikan/sd-webui-regional-prompter"
     "https://github.com/BlafKing/sd-civitai-browser-plus"
@@ -28,6 +29,7 @@ CHECKPOINT_MODELS=(
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
     "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/AmateurIchinagogo-pruned-fp16.safetensors"
+    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/sdxl/CrucibleRING.safetensors"
 )
 
 LORA_MODELS=(
