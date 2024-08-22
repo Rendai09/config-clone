@@ -31,7 +31,7 @@ CHECKPOINT_MODELS=(
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/AmateurIchinagogo-pruned-fp16.safetensors"
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/sdxl/CrucibleRING.safetensors"
     "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/CrucibleRINGTest/CrucibleRINGv1.6.fp16.safetensors"
-    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/civitmix/PrefectYes.safetensors"
+    #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/civitmix/PrefectYes.safetensors"
 )
 
 LORA_MODELS=(
