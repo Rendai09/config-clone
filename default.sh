@@ -21,6 +21,7 @@ EXTENSIONS=(
     "https://github.com/ArtVentureX/sd-webui-agent-scheduler"
     "https://github.com/thomasasfk/sd-webui-aspect-ratio-helper"
     "https://github.com/hako-mikan/sd-webui-supermerger"
+    "https://github.com/DominikDoom/a1111-sd-webui-tagcomplete.git"
 )
 
 CHECKPOINT_MODELS=(
