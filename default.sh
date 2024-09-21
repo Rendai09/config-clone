@@ -31,7 +31,7 @@ CHECKPOINT_MODELS=(
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/AmateurIchinagogo-pruned-fp16.safetensors"
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/sdxl/CrucibleRING.safetensors"
-    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/CrucibleRINGTest/CrucibleRINGv2.0.fp16.safetensors"
+    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/CrucibleRINGTest/CrucibleRINGv2.3.fp16.safetensors"
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/civitmix/PrefectYes.safetensors"
 )
 
@@ -40,8 +40,8 @@ LORA_MODELS=(
 )
 
 VAE_MODELS=(
-    "https://huggingface.co/stabilityai/sd-vae-ft-ema-original/resolve/main/vae-ft-ema-560000-ema-pruned.safetensors"
-    "https://huggingface.co/MoistMix/MoistMixV2/resolve/main/MoistMixV2.vae.pt"
+    #"https://huggingface.co/stabilityai/sd-vae-ft-ema-original/resolve/main/vae-ft-ema-560000-ema-pruned.safetensors"
+    #"https://huggingface.co/MoistMix/MoistMixV2/resolve/main/MoistMixV2.vae.pt"
     "https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
 )
 
