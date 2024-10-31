@@ -31,7 +31,7 @@ CHECKPOINT_MODELS=(
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/AmateurIchinagogo-pruned-fp16.safetensors"
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/sdxl/CrucibleRING.safetensors"
-    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/CrucibleRINGTest/CrucibleRINGv2.7.safetensors"
+    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/CrucibleRINGTest/crucibleRINGSDXL_v2.8.safetensors"
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/sdxl/CrucibleRINGv2.3.fp16.safetensors"
 )
 
@@ -47,7 +47,7 @@ VAE_MODELS=(
 
 ESRGAN_MODELS=(
     "https://huggingface.co/krauzerh/animesharpx4/resolve/main/4x-AnimeSharp.pth"
-    "https://huggingface.co/Shandypur/ESRGAN-4x-UltraSharp/resolve/main/4x-UltraSharp.pth"
+    #"https://huggingface.co/Shandypur/ESRGAN-4x-UltraSharp/resolve/main/4x-UltraSharp.pth"
 )
 
 CONTROLNET_MODELS=(
