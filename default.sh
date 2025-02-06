@@ -29,7 +29,7 @@ CHECKPOINT_MODELS=(
     #"https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt"
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
-    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/ILTest/Illumagine.safetensors"
+    #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/ILTest/Illumagine.safetensors"
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/sdxl/CrucibleRING.safetensors"
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/CrucibleRINGTest/crucibleRINGSDXL_v2.8.safetensors"
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/sdxl/CrucibleRINGv2.3.fp16.safetensors"
