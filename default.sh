@@ -40,8 +40,9 @@ LORA_MODELS=(
 )
 
 VAE_MODELS=(
-    #"https://huggingface.co/stabilityai/sd-vae-ft-ema-original/resolve/main/vae-ft-ema-560000-ema-pruned.safetensors"
-    #"https://huggingface.co/MoistMix/MoistMixV2/resolve/main/MoistMixV2.vae.pt"
+    #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/SDXLVAE/ponyEnhancedVAE_pastelHelperV1.safetensors"
+    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/SDXLVAE/ponyStandardVAE_v10.safetensors"
+    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/SDXLVAE/sharpspectrumvaexl_v1.safetensors"
     "https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
 )
 
