@@ -22,6 +22,7 @@ EXTENSIONS=(
     "https://github.com/thomasasfk/sd-webui-aspect-ratio-helper"
     "https://github.com/hako-mikan/sd-webui-supermerger"
     "https://github.com/DominikDoom/a1111-sd-webui-tagcomplete.git"
+    "https://github.com/Haoming02/sd-forge-couple.git"
 )
 
 CHECKPOINT_MODELS=(
