@@ -88,10 +88,18 @@ function provisioning_start() {
     provisioning_get_files \
         "${A1111_DIR}/models/Stable-diffusion" \
         "${CHECKPOINT_MODELS[@]}"
-        "${A1111_DIR}/models/ESRGAN" \
+     provisioning_get_models \
+        "${A1111_DIR}/models/esrgan"
         "${ESRGAN_MODELS[@]}"
-        "${A1111_DIR}/models/VAE" \
+    provisioning_get_models \
+        "${A1111_DIR}/models/VAE"
         "${VAE_MODELS[@]}"
+    provisioning_get_models \
+        "${A1111_DIR}/models/controlnet" \
+        "${CONTROLNET_MODELS[@]}"
+    provisioning_get_models \
+        "${A1111_DIR}/models/Lora" \
+        "${CONTROLNET_MODELS[@]}"
 
     
     # Avoid git errors because we run as root but files are owned by 'user'
