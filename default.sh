@@ -39,11 +39,6 @@ CHECKPOINT_MODELS=(
 )
 
 UNET_MODELS=(
-    #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/SDXLVAE/ponyEnhancedVAE_pastelHelperV1.safetensors"
-    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/SDXLVAE/ponyStandardVAE_v10.safetensors"
-    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/SDXLVAE/sharpspectrumvaexl_v1.safetensors"
-    "https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
-
 )
 
 LORA_MODELS=(
@@ -93,6 +88,10 @@ function provisioning_start() {
     provisioning_get_files \
         "${A1111_DIR}/models/Stable-diffusion" \
         "${CHECKPOINT_MODELS[@]}"
+        "${A1111_DIR}/models/ESRGAN" \
+        "${ESRGAN_MODELS[@]}"
+        "${A1111_DIR}/models/VAE" \
+        "${VAE_MODELS[@]}"
 
     
     # Avoid git errors because we run as root but files are owned by 'user'
