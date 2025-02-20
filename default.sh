@@ -1,12 +1,14 @@
 #!/bin/bash
-# This file will be sourced in init.sh
-# Namespace functions with provisioning_
 
-# https://raw.githubusercontent.com/ai-dock/stable-diffusion-webui/main/config/provisioning/default.sh
+source /venv/main/bin/activate
+A1111_DIR=${WORKSPACE}/stable-diffusion-webui
 
-### Edit the following arrays to suit your workflow - values must be quoted and separated by newlines or spaces.
+# Packages are installed after nodes so we can fix them...
 
-DISK_GB_REQUIRED=30
+APT_PACKAGES=(
+    #"package-1"
+    #"package-2"
+)
 
 PIP_PACKAGES=(
 
@@ -36,15 +38,23 @@ CHECKPOINT_MODELS=(
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/sdxl/CrucibleRINGv2.3.fp16.safetensors"
 )
 
-LORA_MODELS=(
-    #"https://civitai.com/api/download/models/448977"
-)
-
-VAE_MODELS=(
+UNET_MODELS=(
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/SDXLVAE/ponyEnhancedVAE_pastelHelperV1.safetensors"
     "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/SDXLVAE/ponyStandardVAE_v10.safetensors"
     "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/SDXLVAE/sharpspectrumvaexl_v1.safetensors"
     "https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
+
+)
+
+LORA_MODELS=(
+)
+
+VAE_MODELS=(
+     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/SDXLVAE/ponyEnhancedVAE_pastelHelperV1.safetensors"
+    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/SDXLVAE/ponyStandardVAE_v10.safetensors"
+    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/SDXLVAE/sharpspectrumvaexl_v1.safetensors"
+    "https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
+
 )
 
 ESRGAN_MODELS=(
@@ -70,96 +80,69 @@ CONTROLNET_MODELS=(
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_sketch-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_style-fp16.safetensors"
     #"https://huggingface.co/thibaud/controlnet-openpose-sdxl-1.0/resolve/main/OpenPoseXL2.safetensors"
-)
 
+)
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
 function provisioning_start() {
-    source /opt/ai-dock/etc/environment.sh
-    source /opt/ai-dock/bin/venv-set.sh webui
-
-    DISK_GB_AVAILABLE=$(($(df --output=avail -m "${WORKSPACE}" | tail -n1) / 1000))
-    DISK_GB_USED=$(($(df --output=used -m "${WORKSPACE}" | tail -n1) / 1000))
-    DISK_GB_ALLOCATED=$(($DISK_GB_AVAILABLE + $DISK_GB_USED))
     provisioning_print_header
-    provisioning_get_pip_packages
+    provisioning_get_apt_packages
     provisioning_get_extensions
-    provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/ckpt" \
+    provisioning_get_pip_packages
+    provisioning_get_files \
+        "${A1111_DIR}/models/Stable-diffusion" \
         "${CHECKPOINT_MODELS[@]}"
-    provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/lora" \
-        "${LORA_MODELS[@]}"
-    provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/controlnet" \
-        "${CONTROLNET_MODELS[@]}"
-    provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/vae" \
-        "${VAE_MODELS[@]}"
-    provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/esrgan" \
-        "${ESRGAN_MODELS[@]}"
-     
-    PLATFORM_FLAGS=""
-    if [[ $XPU_TARGET = "CPU" ]]; then
-        PLATFORM_FLAGS="--use-cpu all --skip-torch-cuda-test --no-half"
-    fi
-    PROVISIONING_FLAGS="--skip-python-version-check --no-download-sd-model --do-not-download-clip --port 11404 --exit"
-    FLAGS_COMBINED="${PLATFORM_FLAGS} $(cat /etc/a1111_webui_flags.conf) ${PROVISIONING_FLAGS}"
+
     
+    # Avoid git errors because we run as root but files are owned by 'user'
+    export GIT_CONFIG_GLOBAL=/tmp/temporary-git-config
+    git config --file $GIT_CONFIG_GLOBAL --add safe.directory '*'
+
     # Start and exit because webui will probably require a restart
-    cd /opt/stable-diffusion-webui && \
-    source "$WEBUI_VENV/bin/activate"
-    LD_PRELOAD=libtcmalloc.so python launch.py \
-        ${FLAGS_COMBINED}
-    deactivate
+    cd "${A1111_DIR}"
+    LD_PRELOAD=libtcmalloc_minimal.so.4 \
+        python launch.py \
+            --skip-python-version-check \
+            --no-download-sd-model \
+            --do-not-download-clip \
+            --no-half \
+            --port 11404 \
+            --exit
+
     provisioning_print_end
+}
+
+function provisioning_get_apt_packages() {
+    if [[ -n $APT_PACKAGES ]]; then
+            sudo $APT_INSTALL ${APT_PACKAGES[@]}
+    fi
 }
 
 function provisioning_get_pip_packages() {
     if [[ -n $PIP_PACKAGES ]]; then
-        "$WEBUI_VENV_PIP" install --no-cache-dir ${PIP_PACKAGES[@]}
+            pip install --no-cache-dir ${PIP_PACKAGES[@]}
     fi
 }
 
 function provisioning_get_extensions() {
     for repo in "${EXTENSIONS[@]}"; do
         dir="${repo##*/}"
-        path="/opt/stable-diffusion-webui/extensions/${dir}"
-        requirements="${path}/requirements.txt"
-        if [[ -d $path ]]; then
-            # Pull only if AUTO_UPDATE
-            if [[ ${AUTO_UPDATE,,} == "true" ]]; then
-                printf "Updating extension: %s...\n" "${repo}"
-                ( cd "$path" && git pull )
-            fi
-            # Always pip install
-            if [[ -e $requirements ]]; then
-                "$WEBUI_VENV_PIP" install --no-cache-dir -r "$requirements"
-            fi
-        else
+        path="${A1111_DIR}/extensions/${dir}"
+        if [[ ! -d $path ]]; then
             printf "Downloading extension: %s...\n" "${repo}"
             git clone "${repo}" "${path}" --recursive
-            if [[ -e $requirements ]]; then
-                "$WEBUI_VENV_PIP" install --no-cache-dir -r "${requirements}"
-            fi
         fi
     done
 }
 
-function provisioning_get_models() {
+function provisioning_get_files() {
     if [[ -z $2 ]]; then return 1; fi
+    
     dir="$1"
     mkdir -p "$dir"
     shift
-    if [[ $DISK_GB_ALLOCATED -ge $DISK_GB_REQUIRED ]]; then
-        arr=("$@")
-    else
-        printf "WARNING: Low disk space allocation - Only the first model will be downloaded!\n"
-        arr=("$1")
-    fi
-    
+    arr=("$@")
     printf "Downloading %s model(s) to %s...\n" "${#arr[@]}" "$dir"
     for url in "${arr[@]}"; do
         printf "Downloading: %s\n" "${url}"
@@ -170,18 +153,60 @@ function provisioning_get_models() {
 
 function provisioning_print_header() {
     printf "\n##############################################\n#                                            #\n#          Provisioning container            #\n#                                            #\n#         This will take some time           #\n#                                            #\n# Your container will be ready on completion #\n#                                            #\n##############################################\n\n"
-    if [[ $DISK_GB_ALLOCATED -lt $DISK_GB_REQUIRED ]]; then
-        printf "WARNING: Your allocated disk size (%sGB) is below the recommended %sGB - Some models will not be downloaded\n" "$DISK_GB_ALLOCATED" "$DISK_GB_REQUIRED"
-    fi
 }
 
 function provisioning_print_end() {
-    printf "\nProvisioning complete:  Web UI will start now\n\n"
+    printf "\nProvisioning complete:  Application will start now\n\n"
+}
+
+function provisioning_has_valid_hf_token() {
+    [[ -n "$HF_TOKEN" ]] || return 1
+    url="https://huggingface.co/api/whoami-v2"
+
+    response=$(curl -o /dev/null -s -w "%{http_code}" -X GET "$url" \
+        -H "Authorization: Bearer $HF_TOKEN" \
+        -H "Content-Type: application/json")
+
+    # Check if the token is valid
+    if [ "$response" -eq 200 ]; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+function provisioning_has_valid_civitai_token() {
+    [[ -n "$CIVITAI_TOKEN" ]] || return 1
+    url="https://civitai.com/api/v1/models?hidden=1&limit=1"
+
+    response=$(curl -o /dev/null -s -w "%{http_code}" -X GET "$url" \
+        -H "Authorization: Bearer $CIVITAI_TOKEN" \
+        -H "Content-Type: application/json")
+
+    # Check if the token is valid
+    if [ "$response" -eq 200 ]; then
+        return 0
+    else
+        return 1
+    fi
 }
 
 # Download from $1 URL to $2 file path
 function provisioning_download() {
-    wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+    if [[ -n $HF_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
+        auth_token="$HF_TOKEN"
+    elif 
+        [[ -n $CIVITAI_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
+        auth_token="$CIVITAI_TOKEN"
+    fi
+    if [[ -n $auth_token ]];then
+        wget --header="Authorization: Bearer $auth_token" -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+    else
+        wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+    fi
 }
 
-provisioning_start
+# Allow user to disable provisioning if they started with a script they didn't want
+if [[ ! -f /.noprovisioning ]]; then
+    provisioning_start
+fi
