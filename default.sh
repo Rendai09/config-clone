@@ -28,6 +28,8 @@ PIP_PACKAGES=(
 
 CHECKPOINT_MODELS=(
     "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/ILTest/StellarRitualRING.fp16.safetensors"
+    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/ILTest/StellarRINGV2.1.safetensors"
+    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/ILTest/illustriousXL20_v20.safetensors"
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/sdxl/CrucibleRING.safetensors"
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/CrucibleRINGTest/crucibleRINGSDXL_v2.8.safetensors"
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/sdxl/CrucibleRINGv2.3.fp16.safetensors"
@@ -40,8 +42,6 @@ LORA_MODELS=(
 )
 
 VAE_MODELS=(
-    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/SDXLVAE/ponyStandardVAE_v10.safetensors"
-    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/SDXLVAE/sharpspectrumvaexl_v1.safetensors"
     "https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
 )
 
