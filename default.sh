@@ -10,10 +10,6 @@ APT_PACKAGES=(
     #"package-2"
 )
 
-PIP_PACKAGES=(
-
-)
-
 EXTENSIONS=(
     "https://github.com/Mikubill/sd-webui-controlnet"
     "https://github.com/Bing-su/adetailer"
@@ -27,11 +23,11 @@ EXTENSIONS=(
     "https://github.com/Haoming02/sd-forge-couple.git"
 )
 
+PIP_PACKAGES=(
+
+)
+
 CHECKPOINT_MODELS=(
-    #"https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt"
-    #"https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt"
-    #"https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
-    #"https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
     "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/ILTest/StellarRitualRING.fp16.safetensors"
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/sdxl/CrucibleRING.safetensors"
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/CrucibleRINGTest/crucibleRINGSDXL_v2.8.safetensors"
@@ -45,11 +41,9 @@ LORA_MODELS=(
 )
 
 VAE_MODELS=(
-     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/SDXLVAE/ponyEnhancedVAE_pastelHelperV1.safetensors"
     "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/SDXLVAE/ponyStandardVAE_v10.safetensors"
     "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/SDXLVAE/sharpspectrumvaexl_v1.safetensors"
     "https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
-
 )
 
 ESRGAN_MODELS=(
@@ -58,24 +52,6 @@ ESRGAN_MODELS=(
 )
 
 CONTROLNET_MODELS=(
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_canny-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_depth-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_hed-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_mlsd-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_normal-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_openpose-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_scribble-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_seg-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_canny-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_color-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_depth-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_keypose-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_openpose-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_seg-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_sketch-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_style-fp16.safetensors"
-    #"https://huggingface.co/thibaud/controlnet-openpose-sdxl-1.0/resolve/main/OpenPoseXL2.safetensors"
-
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
@@ -88,18 +64,6 @@ function provisioning_start() {
     provisioning_get_files \
         "${A1111_DIR}/models/Stable-diffusion" \
         "${CHECKPOINT_MODELS[@]}"
-     provisioning_get_models \
-        "${A1111_DIR}/models/esrgan"
-        "${ESRGAN_MODELS[@]}"
-    provisioning_get_models \
-        "${A1111_DIR}/models/VAE"
-        "${VAE_MODELS[@]}"
-    provisioning_get_models \
-        "${A1111_DIR}/models/controlnet" \
-        "${CONTROLNET_MODELS[@]}"
-    provisioning_get_models \
-        "${A1111_DIR}/models/Lora" \
-        "${CONTROLNET_MODELS[@]}"
 
     
     # Avoid git errors because we run as root but files are owned by 'user'
