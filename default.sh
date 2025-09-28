@@ -14,7 +14,7 @@ EXTENSIONS=(
     "https://github.com/Bing-su/adetailer"
     "https://github.com/zanllp/sd-webui-infinite-image-browsing"
     "https://github.com/hako-mikan/sd-webui-regional-prompter"
-    "https://github.com/BlafKing/sd-civitai-browser-plus"
+    "https://github.com/TheSlateGray/sd-civitai-browser-plus"
     "https://github.com/ArtVentureX/sd-webui-agent-scheduler"
     "https://github.com/thomasasfk/sd-webui-aspect-ratio-helper"
     "https://github.com/hako-mikan/sd-webui-supermerger"
