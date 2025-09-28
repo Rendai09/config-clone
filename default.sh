@@ -27,9 +27,9 @@ PIP_PACKAGES=(
 )
 
 CHECKPOINT_MODELS=(
-    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/ILTest/StellarRitualRING.fp16.safetensors"
-    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/ILTest/StellarRINGV2.1_BAKED.safetensors"
-    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/ILTest/illustriousXL20_v20.safetensors"
+    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/Download/StellarRitualRING.fp16.safetensors"
+    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/Download/StellarRINGV2.1_BAKED.safetensors"
+    #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/ILTest/illustriousXL20_v20.safetensors"
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/sdxl/CrucibleRING.safetensors"
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/sdxl/CrucibleRINGv2.3.fp16.safetensors"
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/CrucibleRINGTest/crucibleRINGSDXL_v2.8.safetensors"
