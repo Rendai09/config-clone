@@ -14,7 +14,7 @@ EXTENSIONS=(
     "https://github.com/Bing-su/adetailer"
     "https://github.com/zanllp/sd-webui-infinite-image-browsing"
     "https://github.com/hako-mikan/sd-webui-regional-prompter"
-    "https://github.com/SignalFlagZ/sd-webui-civbrowser"
+    #"https://github.com/SignalFlagZ/sd-webui-civbrowser"
     "https://github.com/ArtVentureX/sd-webui-agent-scheduler"
     "https://github.com/thomasasfk/sd-webui-aspect-ratio-helper"
     "https://github.com/hako-mikan/sd-webui-supermerger"
@@ -31,7 +31,7 @@ CHECKPOINT_MODELS=(
     "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/Download/StellarRINGV2.1_BAKED.safetensors"
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/ILTest/illustriousXL20_v20.safetensors"
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/Download/CrucibleRING.safetensors"
-    #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/Download/CrucibleRINGv2.3.fp16.safetensors"
+    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/Download/CrucibleRINGv2.3.fp16.safetensors"
     "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/Download/crucibleRINGSDXL_v2.8.safetensors"
 )
 
