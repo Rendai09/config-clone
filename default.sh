@@ -20,6 +20,7 @@ EXTENSIONS=(
     "https://github.com/hako-mikan/sd-webui-supermerger"
     "https://github.com/DominikDoom/a1111-sd-webui-tagcomplete.git"
     #"https://github.com/Haoming02/sd-forge-couple.git"
+    "https://github.com/FallenIncursio/arcenciel-link-webui.git"
 )
 
 PIP_PACKAGES=(
