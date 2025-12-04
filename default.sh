@@ -32,7 +32,7 @@ CHECKPOINT_MODELS=(
     "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/StellarRINGV2.1_BAKED.safetensors"
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/ILTest/illustriousXL20_v20.safetensors"
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/CrucibleRING.safetensors"
-    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/CrucibleRINGv2.3.fp16.safetensors"
+    #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/CrucibleRINGv2.3.fp16.safetensors"
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/crucibleRINGSDXL_v2.8.safetensors"
 )
 
