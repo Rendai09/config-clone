@@ -20,7 +20,7 @@ EXTENSIONS=(
     "https://github.com/hako-mikan/sd-webui-supermerger"
     "https://github.com/DominikDoom/a1111-sd-webui-tagcomplete.git"
     #"https://github.com/Haoming02/sd-forge-couple.git"
-    "https://github.com/FallenIncursio/arcenciel-link-webui.git"
+    #"https://github.com/FallenIncursio/arcenciel-link-webui.git"
 )
 
 PIP_PACKAGES=(
@@ -33,7 +33,7 @@ CHECKPOINT_MODELS=(
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/ILTest/illustriousXL20_v20.safetensors"
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/CrucibleRING.safetensors"
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/CrucibleRINGv2.3.fp16.safetensors"
-    #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/crucibleRINGSDXL_v2.8.safetensors"
+    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/crucibleRINGSDXL_v2.8.safetensors"
 )
 
 UNET_MODELS=(
