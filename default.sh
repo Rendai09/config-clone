@@ -40,7 +40,7 @@ CHECKPOINT_MODELS=(
     "https://huggingface.co/Infamoushugger/Mortubrux/resolve/main/Mortubrux%20EQB7%20V2.safetensors"
     #"https://huggingface.co/FallenIncursio/Of_Mice_and_Doe/resolve/main/OfMiceAndDoe_v2.34.safetensors"
     #"https://huggingface.co/Manityro/Veridium/resolve/main/Veridium-V2.safetensors"
-    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/StellarVerimilliondumL2.safetensors"
+    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/StellarVerimilliondum/StellarVerimilliondumL2.safetensors"
 )
 
 UNET_MODELS=(
