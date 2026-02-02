@@ -33,7 +33,7 @@ CHECKPOINT_MODELS=(
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/ILTest/illustriousXL20_v20.safetensors"
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/CrucibleRING.safetensors"
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/CrucibleRINGv2.3.fp16.safetensors"
-    #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/crucibleRINGSDXL_v2.8.safetensors"
+    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/crucibleRINGSDXL_v2.8.safetensors"
     #"https://huggingface.co/Bshiblobble/Flawed_CoMIX/resolve/main/FlawedCoMixEQ.safetensors"
     #"https://huggingface.co/Radiomood/CranberryMix/resolve/main/cranberrymix_v2.safetensors"
     #"https://huggingface.co/Manityro/Vermilion/resolve/main/Vermilion-V3.safetensors"
