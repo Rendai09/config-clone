@@ -11,9 +11,9 @@ APT_PACKAGES=(
 )
 
 EXTENSIONS=(
-    "https://github.com/Bing-su/adetailer"
     "https://github.com/zanllp/sd-webui-infinite-image-browsing"
     "https://github.com/hako-mikan/sd-webui-regional-prompter"
+    "https://github.com/Bing-su/adetailer"
     #"https://github.com/SignalFlagZ/sd-webui-civbrowser"
     "https://github.com/ArtVentureX/sd-webui-agent-scheduler"
     "https://github.com/thomasasfk/sd-webui-aspect-ratio-helper"
