@@ -9,7 +9,11 @@ APT_PACKAGES=(
     #"package-1"
     #"package-2"
 )
-
+CONFIG_AND_STYLES=(
+    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/config/styles.csv"
+    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/config/config.json"
+    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/config/ui-config.json"
+)
 EXTENSIONS=(
     "https://github.com/zanllp/sd-webui-infinite-image-browsing"
     "https://github.com/hako-mikan/sd-webui-regional-prompter"
@@ -29,8 +33,8 @@ PIP_PACKAGES=(
 
 CHECKPOINT_MODELS=(
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/StellarRitualRING.fp16.safetensors"
-    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/StellarRINGV2.1_BAKED.safetensors"
-    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/VercalionRING_v1.safetensors"
+    #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/StellarRINGV2.1_BAKED.safetensors"
+    #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/VercalionRING_v1.safetensors"
     #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/ILTest/illustriousXL20_v20.safetensors"
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/CrucibleRING.safetensors"
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/CrucibleRINGv2.3.fp16.safetensors"
@@ -69,9 +73,14 @@ function provisioning_start() {
     provisioning_get_apt_packages
     provisioning_get_extensions
     provisioning_get_pip_packages
-    provisioning_get_files \
-        "${A1111_DIR}/models/Stable-diffusion" \
-        "${CHECKPOINT_MODELS[@]}"
+    
+    # Bổ sung các hàm gọi tải đầy đủ mọi loại model
+    provisioning_get_files "${A1111_DIR}/models/Stable-diffusion" "${CHECKPOINT_MODELS[@]}"
+    provisioning_get_files "${A1111_DIR}/models/Lora" "${LORA_MODELS[@]}"
+    provisioning_get_files "${A1111_DIR}/models/VAE" "${VAE_MODELS[@]}"
+    provisioning_get_files "${A1111_DIR}/models/ESRGAN" "${ESRGAN_MODELS[@]}"
+    provisioning_get_files "${A1111_DIR}/models/ControlNet" "${CONTROLNET_MODELS[@]}"
+    provisioning_get_files "${A1111_DIR}" "${CONFIG_AND_STYLES[@]}"
 
     
     # Avoid git errors because we run as root but files are owned by 'user'
