@@ -1,7 +1,8 @@
 #!/bin/bash
 
 source /venv/main/bin/activate
-A1111_DIR=${WORKSPACE}/stable-diffusion-webui
+# Đổi đường dẫn thư mục gốc sang Forge
+A1111_DIR=${WORKSPACE}/stable-diffusion-webui-forge
 
 # Packages are installed after nodes so we can fix them...
 
@@ -24,24 +25,12 @@ EXTENSIONS=(
 )
 
 PIP_PACKAGES=(
-
 )
 
 CHECKPOINT_MODELS=(
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/StellarRitualRING.fp16.safetensors"
     "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/StellarRINGV2.1_BAKED.safetensors"
     "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/VercalionRING_v1.safetensors"
-    #"https://huggingface.co/datasets/Rendai/CloneData/resolve/main/ILTest/illustriousXL20_v20.safetensors"
-    #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/CrucibleRING.safetensors"
-    #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/CrucibleRINGv2.3.fp16.safetensors"
-    #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/crucibleRINGSDXL_v2.8.safetensors"
-    #"https://huggingface.co/Bshiblobble/Flawed_CoMIX/resolve/main/FlawedCoMixEQ.safetensors"
-    #"https://huggingface.co/Radiomood/CranberryMix/resolve/main/cranberrymix_v2.safetensors"
-    #"https://huggingface.co/Manityro/Vermilion/resolve/main/Vermilion-V3.safetensors"
-    #"https://huggingface.co/Infamoushugger/Mortubrux/resolve/main/Mortubrux%20EQB7%20V2.safetensors"
-    #"https://huggingface.co/FallenIncursio/Of_Mice_and_Doe/resolve/main/OfMiceAndDoe_v2.34.safetensors"
-    #"https://huggingface.co/Manityro/Veridium/resolve/main/Veridium-V2.safetensors"
-    #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/StellarVerimilliondum/StellarVerimilliondumL2.safetensors"
 )
 
 UNET_MODELS=(
@@ -69,11 +58,14 @@ function provisioning_start() {
     provisioning_get_apt_packages
     provisioning_get_extensions
     provisioning_get_pip_packages
-    provisioning_get_files \
-        "${A1111_DIR}/models/Stable-diffusion" \
-        "${CHECKPOINT_MODELS[@]}"
-
     
+    # Bổ sung các hàm gọi tải đầy đủ mọi loại model
+    provisioning_get_files "${A1111_DIR}/models/Stable-diffusion" "${CHECKPOINT_MODELS[@]}"
+    provisioning_get_files "${A1111_DIR}/models/Lora" "${LORA_MODELS[@]}"
+    provisioning_get_files "${A1111_DIR}/models/VAE" "${VAE_MODELS[@]}"
+    provisioning_get_files "${A1111_DIR}/models/ESRGAN" "${ESRGAN_MODELS[@]}"
+    provisioning_get_files "${A1111_DIR}/models/ControlNet" "${CONTROLNET_MODELS[@]}"
+
     # Avoid git errors because we run as root but files are owned by 'user'
     export GIT_CONFIG_GLOBAL=/tmp/temporary-git-config
     git config --file $GIT_CONFIG_GLOBAL --add safe.directory '*'
@@ -86,7 +78,7 @@ function provisioning_start() {
             --no-download-sd-model \
             --do-not-download-clip \
             --no-half \
-            --port 11404 \
+            --port 17860 \
             --exit
 
     provisioning_print_end
@@ -146,7 +138,6 @@ function provisioning_has_valid_hf_token() {
         -H "Authorization: Bearer $HF_TOKEN" \
         -H "Content-Type: application/json")
 
-    # Check if the token is valid
     if [ "$response" -eq 200 ]; then
         return 0
     else
@@ -162,7 +153,6 @@ function provisioning_has_valid_civitai_token() {
         -H "Authorization: Bearer $CIVITAI_TOKEN" \
         -H "Content-Type: application/json")
 
-    # Check if the token is valid
     if [ "$response" -eq 200 ]; then
         return 0
     else
@@ -170,7 +160,6 @@ function provisioning_has_valid_civitai_token() {
     fi
 }
 
-# Download from $1 URL to $2 file path
 function provisioning_download() {
     if [[ -n $HF_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
         auth_token="$HF_TOKEN"
@@ -185,7 +174,6 @@ function provisioning_download() {
     fi
 }
 
-# Allow user to disable provisioning if they started with a script they didn't want
 if [[ ! -f /.noprovisioning ]]; then
     provisioning_start
 fi
