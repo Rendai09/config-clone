@@ -10,7 +10,12 @@ APT_PACKAGES=(
     #"package-1"
     #"package-2"
 )
-
+# Thêm phần này để chứa link các file config/styles
+CONFIG_AND_STYLES=(
+    "https://raw.githubusercontent.com/user/repo/main/styles.csv"
+    "https://raw.githubusercontent.com/user/repo/main/config.json"
+    "https://raw.githubusercontent.com/user/repo/main/ui-config.json"
+)
 EXTENSIONS=(
     "https://github.com/zanllp/sd-webui-infinite-image-browsing"
     "https://github.com/hako-mikan/sd-webui-regional-prompter"
@@ -65,6 +70,7 @@ function provisioning_start() {
     provisioning_get_files "${A1111_DIR}/models/VAE" "${VAE_MODELS[@]}"
     provisioning_get_files "${A1111_DIR}/models/ESRGAN" "${ESRGAN_MODELS[@]}"
     provisioning_get_files "${A1111_DIR}/models/ControlNet" "${CONTROLNET_MODELS[@]}"
+    provisioning_get_files "${A1111_DIR}" "${CONFIG_AND_STYLES[@]}"
 
     # Avoid git errors because we run as root but files are owned by 'user'
     export GIT_CONFIG_GLOBAL=/tmp/temporary-git-config
