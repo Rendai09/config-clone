@@ -12,9 +12,9 @@ APT_PACKAGES=(
 )
 # Thêm phần này để chứa link các file config/styles
 CONFIG_AND_STYLES=(
-    "https://raw.githubusercontent.com/user/repo/main/styles.csv"
-    "https://raw.githubusercontent.com/user/repo/main/config.json"
-    "https://raw.githubusercontent.com/user/repo/main/ui-config.json"
+    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/config/styles.csv"
+    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/config/config.json"
+    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/config/ui-config.json"
 )
 EXTENSIONS=(
     "https://github.com/zanllp/sd-webui-infinite-image-browsing"
