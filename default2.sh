@@ -35,7 +35,7 @@ PIP_PACKAGES=(
 
 CHECKPOINT_MODELS=(
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/StellarRitualRING.fp16.safetensors"
-    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/StellarRINGV2.1_BAKED.safetensors"
+    #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/StellarRINGV2.1_BAKED.safetensors"
     "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/VercalionRING_v1.safetensors"
 )
 
