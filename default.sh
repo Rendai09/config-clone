@@ -26,7 +26,11 @@ EXTENSIONS=(
     #"https://github.com/Haoming02/sd-forge-couple.git"
     #"https://github.com/FallenIncursio/arcenciel-link-webui.git"
 )
-
+EMBEDDINGS=(
+    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/embeddings/Smooth_Negative-neg.safetensors"
+    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/embeddings/lazyneg.safetensors"
+    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/embeddings/lazypos.safetensors"
+)
 PIP_PACKAGES=(
 
 )
@@ -80,6 +84,7 @@ function provisioning_start() {
     provisioning_get_files "${A1111_DIR}/models/VAE" "${VAE_MODELS[@]}"
     provisioning_get_files "${A1111_DIR}/models/ESRGAN" "${ESRGAN_MODELS[@]}"
     provisioning_get_files "${A1111_DIR}/models/ControlNet" "${CONTROLNET_MODELS[@]}"
+    provisioning_get_files "${A1111_DIR}/embeddings" "${EMBEDDINGS[@]}"
     provisioning_get_files "${A1111_DIR}" "${CONFIG_AND_STYLES[@]}"
 
     
