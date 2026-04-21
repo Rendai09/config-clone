@@ -34,17 +34,17 @@ PIP_PACKAGES=(
 )
 
 EMBEDDINGS=(
-    "https://civitai.com/api/download/models/1195487?type=Negative&format=Other"
-    "https://civitai.com/api/download/models/1833157?type=Model&format=SafeTensor"
-    "https://civitai.com/api/download/models/1860747?type=Model&format=SafeTensor"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Smooth_Negative-neg.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/lazyneg.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/lazypos.safetensors"
 )
 
 CHECKPOINT_MODELS=(
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/StellarRitualRING.fp16.safetensors"
-    #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/StellarRINGV2.1_BAKED.safetensors"
+    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/StellarRINGV2.1_BAKED.safetensors"
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/VercalionRING_v1.safetensors"
     #"https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/diffusion_models/anima-preview3-base.safetensors"
-    "https://civitai.red/api/download/models/2843829?type=Model&format=SafeTensor&size=pruned&fp=bf16"
+    #"https://civitai.red/api/download/models/2843829?type=Model&format=SafeTensor&size=pruned&fp=bf16"
 )
 
 UNET_MODELS=(
