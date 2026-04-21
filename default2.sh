@@ -44,7 +44,7 @@ CHECKPOINT_MODELS=(
     "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/StellarRINGV2.1_BAKED.safetensors"
     "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/VercalionRING_v1.safetensors"
     #"https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/diffusion_models/anima-preview3-base.safetensors"
-    #"https://civitai.red/api/download/models/2843829?type=Model&format=SafeTensor&size=pruned&fp=bf16"
+    "https://civitai.red/api/download/models/2843829?type=Model&format=SafeTensor&size=pruned&fp=bf16"
 )
 
 UNET_MODELS=(
