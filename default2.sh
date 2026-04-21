@@ -34,9 +34,9 @@ PIP_PACKAGES=(
 )
 
 EMBEDDINGS=(
-    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/embeddings/Smooth_Negative-neg.safetensors"
-    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/embeddings/lazyneg.safetensors"
-    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/embeddings/lazypos.safetensors"
+    "https://civitai.com/api/download/models/1195487?type=Negative&format=Other"
+    "https://civitai.com/api/download/models/1833157?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/1860747?type=Model&format=SafeTensor"
 )
 
 CHECKPOINT_MODELS=(
