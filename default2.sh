@@ -52,6 +52,13 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/Up/HighSchoolDxDHERO_Rossweisse_IlluXL.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/Up/fireemblem_lysithea_illustriousXL.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/Up/ichigo_kurosaki_ilxl.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/Up/issei_v2.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/Up/kazuma-satou-s2-illustriousxl-lora-nochekaiser.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/Up/matsumotorangiku-illu-nvwls-v1.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/Up/yoruichi-shihouin-anime-illustriousxl-lora-nochekaiser.safetensors"
 )
 
 VAE_MODELS=(
