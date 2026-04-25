@@ -42,7 +42,7 @@ EMBEDDINGS=(
 CHECKPOINT_MODELS=(
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Crucible/CrucibleRING.safetensors"
     "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Stellar/StellarRINGV2.1_BAKED.safetensors"
-    #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Vercalion/VercalionRING_v1.safetensors"
+    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Vercalion/VercalionRING_v1.safetensors"
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Crucible/crucibleRINGSDXL_v2.8.safetensors"
     #"https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/diffusion_models/anima-preview3-base.safetensors"
     #"https://civitai.red/api/download/models/2843829?type=Model&format=SafeTensor&size=pruned&fp=bf16"
