@@ -67,6 +67,7 @@ VAE_MODELS=(
 
 ESRGAN_MODELS=(
     "https://huggingface.co/krauzerh/animesharpx4/resolve/main/4x-AnimeSharp.pth"
+    "https://huggingface.co/lokCX/4x-Ultrasharp/resolve/main/4x-UltraSharp.pth"
     #"https://huggingface.co/Shandypur/ESRGAN-4x-UltraSharp/resolve/main/4x-UltraSharp.pth"
 )
 
