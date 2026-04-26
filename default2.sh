@@ -25,6 +25,8 @@ EXTENSIONS=(
     "https://github.com/thomasasfk/sd-webui-aspect-ratio-helper"
     "https://github.com/hako-mikan/sd-webui-supermerger"
     "https://github.com/DominikDoom/a1111-sd-webui-tagcomplete"
+    "https://github.com/richrobber2/canvas-zoom"
+    "https://github.com/alemelis/sd-webui-ar"
     #"https://github.com/Haoming02/sd-forge-couple.git"
     #"https://github.com/FallenIncursio/arcenciel-link-webui.git"
     #"https://github.com/Haoming02/sd-forge-couple.git"
