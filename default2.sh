@@ -36,16 +36,17 @@ PIP_PACKAGES=(
 )
 
 EMBEDDINGS=(
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Smooth_Negative-neg.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Smooth_Negative-neg.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/lazyneg.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/lazypos.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/SmoothNegativePony-neg.safetensors"
 )
 
 CHECKPOINT_MODELS=(
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Crucible/CrucibleRING.safetensors"
-    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Stellar/StellarRINGV2.1_BAKED.safetensors"
-    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Vercalion/VercalionRING_v1.safetensors"
-    #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Crucible/crucibleRINGSDXL_v2.8.safetensors"
+    #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Stellar/StellarRINGV2.1_BAKED.safetensors"
+    #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Vercalion/VercalionRING_v1.safetensors"
+    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Crucible/crucibleRINGSDXL_v2.8.safetensors"
     #"https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/diffusion_models/anima-preview3-base.safetensors"
     #"https://civitai.red/api/download/models/2843829?type=Model&format=SafeTensor&size=pruned&fp=bf16"
 )
@@ -54,11 +55,30 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/Up/HighSchoolDxDHERO_Rossweisse_IlluXL.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/Up/ichigo_kurosaki_ilxl.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/Up/issei_v2.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/Up/Yoruichi_Shihouin_Bleach_IL_V1.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/Up/matsumotorangiku-illu-nvwls-v1.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B6Crucible3/AhsokaS7PDXL_V1-Manityro-adamw.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B6Crucible3/Ben_tennyson_Ben_10_alien_force.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B6Crucible3/AhsokaTanoXL_by_KillerUwU13_AI.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B6Crucible3/Benaf.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B6Crucible3/IbukiDoujiAsc2_Dwnsty.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B6Crucible3/IbukiDoujiAsc3_Dwnsty.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B6Crucible3/Palutena_pdxl_Incrs_v1.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B6Crucible3/samus-09.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B6Crucible3/rumi-usagiyama-ponyxl-lora-nochekaiser.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B6Crucible3/mythra-xb-richy-v1_pdxl.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B6Crucible3/link.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B6Crucible3/kazuma-satou-ponyxl-lora-nochekaiser.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B6Crucible3/SabineWrenXL.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/Fujimaru_Ritsuka_Illustrious_XL.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/johanna.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/johanna2.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/murasakishikibu-illu-nvwls-v1.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/MrsSnake_Illu_Dwnsty.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/Mrs_SnakeFate_Grand_Order.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/MsSnake_Fate.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/Omii_san.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/Omiisan.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/Omisan__Mr__Snake__FateGrand_Order.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/fgo_mrs_snake.safetensors"
 )
 
 VAE_MODELS=(
