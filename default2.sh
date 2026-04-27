@@ -57,8 +57,6 @@ UNET_MODELS=(
 LORA_MODELS=(
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B6Crucible3/AhsokaS7PDXL_V1-Manityro-adamw.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B6Crucible3/AhsokaTanoXL_by_KillerUwU13_AI.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B6Crucible3/Palutena_pdxl_Incrs_v1.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B6Crucible3/mythra-xb-richy-v1_pdxl.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B6Crucible3/SabineWrenXL.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/Fujimaru_Ritsuka_Illustrious_XL.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/johanna.safetensors"
