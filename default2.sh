@@ -27,26 +27,25 @@ EXTENSIONS=(
     "https://github.com/DominikDoom/a1111-sd-webui-tagcomplete"
     "https://github.com/richrobber2/canvas-zoom"
     "https://github.com/alemelis/sd-webui-ar"
-    #"https://github.com/Haoming02/sd-forge-couple.git"
-    #"https://github.com/FallenIncursio/arcenciel-link-webui.git"
-    #"https://github.com/Haoming02/sd-forge-couple.git"
+    "https://github.com/Haoming02/sd-forge-couple"
+    #"https://github.com/FallenIncursio/arcenciel-link-webui"
 )
 
 PIP_PACKAGES=(
 )
 
 EMBEDDINGS=(
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Smooth_Negative-neg.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Smooth_Negative-neg.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/lazyneg.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/lazypos.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/SmoothNegativePony-neg.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/SmoothNegativePony-neg.safetensors"
 )
 
 CHECKPOINT_MODELS=(
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Crucible/CrucibleRING.safetensors"
-    #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Stellar/StellarRINGV2.1_BAKED.safetensors"
-    #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Vercalion/VercalionRING_v1.safetensors"
-    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Crucible/crucibleRINGSDXL_v2.8.safetensors"
+    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Stellar/StellarRINGV2.1_BAKED.safetensors"
+    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Vercalion/VercalionRING_v1.safetensors"
+    #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Crucible/crucibleRINGSDXL_v2.8.safetensors"
     #"https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/diffusion_models/anima-preview3-base.safetensors"
     #"https://civitai.red/api/download/models/2843829?type=Model&format=SafeTensor&size=pruned&fp=bf16"
 )
@@ -55,20 +54,17 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B6Crucible3/AhsokaS7PDXL_V1-Manityro-adamw.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B6Crucible3/AhsokaTanoXL_by_KillerUwU13_AI.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B6Crucible3/SabineWrenXL.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/Fujimaru_Ritsuka_Illustrious_XL.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/johanna.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/johanna2.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/murasakishikibu-illu-nvwls-v1.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/MrsSnake_Illu_Dwnsty.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/Mrs_SnakeFate_Grand_Order.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/MsSnake_Fate.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/Omii_san.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/Omiisan.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/Omisan__Mr__Snake__FateGrand_Order.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/fgo_mrs_snake.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/Fujimaru_Ritsuka_Illustrious_XL.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/johanna.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/johanna2.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/murasakishikibu-illu-nvwls-v1.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/MrsSnake_Illu_Dwnsty.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/Mrs_SnakeFate_Grand_Order.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/MsSnake_Fate.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/Omii_san.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/Omiisan.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/Omisan__Mr__Snake__FateGrand_Order.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/fgo_mrs_snake.safetensors"
 )
 
 VAE_MODELS=(
@@ -78,7 +74,6 @@ VAE_MODELS=(
 ESRGAN_MODELS=(
     "https://huggingface.co/krauzerh/animesharpx4/resolve/main/4x-AnimeSharp.pth"
     "https://huggingface.co/lokCX/4x-Ultrasharp/resolve/main/4x-UltraSharp.pth"
-    #"https://huggingface.co/Shandypur/ESRGAN-4x-UltraSharp/resolve/main/4x-UltraSharp.pth"
 )
 
 CONTROLNET_MODELS=(
