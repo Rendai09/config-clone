@@ -54,10 +54,10 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/Fujimaru_Ritsuka_Illustrious_XL.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/Fujimaru_Ritsuka_Illustrious_XL.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/johanna.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/johanna2.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/murasakishikibu-illu-nvwls-v1.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/murasakishikibu-illu-nvwls-v1.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/MrsSnake_Illu_Dwnsty.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/Mrs_SnakeFate_Grand_Order.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/HebiNyoubou/MsSnake_Fate.safetensors"
