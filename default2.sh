@@ -75,7 +75,7 @@ LORA_MODELS=(
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/Neuvillette.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/Sumeragi_Lee_Noriega_IL.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/Yusuke_Kitagawa_-_Persona_5_ILL.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/kurokamimedaka-illu-nvwls-v1.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/kurokamimedaka-illu-nvwls-v1.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/lartoria-illu-nvwls-v1.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/misshina-illu-nvwls-v1.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/naofumi_iwatani_ilxl.safetensors"
