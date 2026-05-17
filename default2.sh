@@ -68,17 +68,11 @@ LORA_MODELS=(
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B7/karane_and_hakari-Illustrious.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B7/nilou-illu-nvwls-v1.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B7/Hakari_and_Hahari_Hanazono_Mei_Meido_and_Nano_Eiai_The_100_Girlfriends_Who_Really_Really_Really_Really_Really_Love_You.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/Gorou_-_ILL.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/Irisviel_Von_Einzbern.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/KiritsuguLORA.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/Megurine Lukavoc-Illus.safetensor"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/Neuvillette.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/Sumeragi_Lee_Noriega_IL.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/Yusuke_Kitagawa_-_Persona_5_ILL.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BN/Irisviel_Von_Einzbern.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BN/KiritsuguLORA.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/Megurine_Lukavoc_Illus.safetensor"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/kurokamimedaka-illu-nvwls-v1.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/lartoria-illu-nvwls-v1.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/misshina-illu-nvwls-v1.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/naofumi_iwatani_ilxl.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BN/lartoria-illu-nvwls-v1.safetensors"
 )
 
 VAE_MODELS=(
