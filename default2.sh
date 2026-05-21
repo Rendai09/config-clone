@@ -54,13 +54,16 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/Fujimaru_Ritsuka_Illustrious_XL.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/johanna.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/murasakishikibu-illu-nvwls-v1.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/Mrs_SnakeFate_Grand_Order.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/OdaKippoushi_illustrious_v1.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/OdaNobunaga_Illu_Dwnsty-000008.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/fate_odanobunaga_illustriousXL.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/Fujimaru_Ritsuka_Illustrious_XL.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/johanna.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/murasakishikibu-illu-nvwls-v1.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/Mrs_SnakeFate_Grand_Order.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/OdaKippoushi_illustrious_v1.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/OdaNobunaga_Illu_Dwnsty-000008.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/fate_odanobunaga_illustriousXL.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/Musashi_Illus.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/molay_illus.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/RitsukaTF/jacquesdemolayillv1.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B7/Aether_-_ILL.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B7/Fujimaru_Ritsuka_Illustrious_XL.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B7/Hoseki_Fate_Zenobia_IllustriousXL_v1.safetensors"
