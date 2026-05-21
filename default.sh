@@ -82,7 +82,7 @@ function provisioning_start() {
     provisioning_get_files "${A1111_DIR}/models/ESRGAN" "${ESRGAN_MODELS[@]}"
     provisioning_get_files "${A1111_DIR}/models/ControlNet" "${CONTROLNET_MODELS[@]}"
     provisioning_get_files "${A1111_DIR}/embeddings" "${EMBEDDINGS[@]}"
-    provisioning_get_files "${A1111_DIR}/models/text_encoders" "${TEXT_ENCODER_MODELS[@]}"
+    provisioning_get_files "${A1111_DIR}/models/text_encoder" "${TEXT_ENCODER_MODELS[@]}"
     provisioning_get_files "${A1111_DIR}" "${CONFIG_AND_STYLES[@]}"
 
     # Avoid git errors because we run as root but files are owned by 'user'
