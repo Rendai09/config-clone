@@ -76,11 +76,11 @@ LORA_MODELS=(
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/Megurine_Lukavoc_Illus.safetensor"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/kurokamimedaka-illu-nvwls-v1.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BN/lartoria-illu-nvwls-v1.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/GoWtoFEG/Thor_God_of_War_V2.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/GoWtoFEG/feloki-illu-nvwls-v1.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/GoWtoFEG/fire_emblem_thorr_illuV1.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/GoWtoFEG/AtreusLora.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/GoWtoFEG/AtreusLora2.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/GoWtoFEG/Thor_God_of_War_V2.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/GoWtoFEG/feloki-illu-nvwls-v1.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/GoWtoFEG/fire_emblem_thorr_illuV1.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/GoWtoFEG/AtreusLora.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/GoWtoFEG/AtreusLora2.safetensors"
 )
 
 VAE_MODELS=(
