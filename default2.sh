@@ -48,6 +48,9 @@ CHECKPOINT_MODELS=(
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Crucible/crucibleRINGSDXL_v2.8.safetensors"
     #"https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/diffusion_models/anima-preview3-base.safetensors"
     #"https://civitai.red/api/download/models/2843829?type=Model&format=SafeTensor&size=pruned&fp=bf16"
+    "https://huggingface.co/FallenIncursio/PaSanctuary/resolve/main/PaSanctuary_v5.safetensors"
+    "https://huggingface.co/hollowstrawberry/holymix/resolve/main/HolyMix_illustriousXL_v1.safetensors"
+    "https://huggingface.co/richyrich515/richyrichMixIXL/resolve/main/richyrichMixIXL-v1.fp16.safetensors"
 )
 
 UNET_MODELS=(
