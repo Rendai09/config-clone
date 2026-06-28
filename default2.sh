@@ -57,8 +57,8 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/molay_illus.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/jacquesdemolayillv1.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/molay_illus.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/jacquesdemolayillv1.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BN/Irisviel_Von_Einzbern.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BN/KiritsuguLORA.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/Megurine_Lukavoc_Illus.safetensor"
@@ -76,6 +76,7 @@ LORA_MODELS=(
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/Echidna_ReZero_-_Starting_Life_in_Another_World__ReZero_Kara_Hajimeru_Isekai_Seikatsu_v3.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/subaru_natsuki_ilxl.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/LumeraFE-illu-bsinky-v1.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B9/ElizabethComstockIllustrious.safetensors"
 )
 
 VAE_MODELS=(
