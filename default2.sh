@@ -57,8 +57,8 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/molay_illus.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/jacquesdemolayillv1.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/molay_illus.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/jacquesdemolayillv1.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BN/Irisviel_Von_Einzbern.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BN/KiritsuguLORA.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/Megurine_Lukavoc_Illus.safetensor"
