@@ -63,14 +63,12 @@ LORA_MODELS=(
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BN/lartoria-illu-nvwls-v1.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/Char-ZZZ-JaneDoe-V3-IL.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/Scathach-FGO-ILXL.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/JacinthePokemon_IXL.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/LumeraFE-illu-bsinky-v1.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B10/LumeraFE-illu-bsinky-v1.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B9/saya-hsotdILv1.1.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B9/HighSchoolDxDHERO_XenoviaQuarta_IlluXL.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B9/Lauma_ILv3.1.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B9/Nefer_Genshin2_IL.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B9/lauma_genshin_impact_ilxl_goofy.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B9/nefer_genshin_impact_ilxl_goofy.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/evelynnIL-14.safetensors"
 )
 
 VAE_MODELS=(
