@@ -69,6 +69,8 @@ LORA_MODELS=(
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B9/Lauma_ILv3.1.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B9/Nefer_Genshin2_IL.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/evelynnIL-14.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B9/OnlySee_HalftheSky_r1.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B9/Frieren_Lap_Pillow_Comic__Meme_Pose_Concept__IllustriousXL_and_NoobAI.safetensors"
 )
 
 VAE_MODELS=(
