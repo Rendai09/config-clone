@@ -62,12 +62,12 @@ LORA_MODELS=(
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B8/Megurine_Lukavoc_Illus.safetensor"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BN/lartoria-illu-nvwls-v1.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/LumeraFE-illu-bsinky-v1.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B10/CanariZANoobXL_byKonan_V2.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B10/tarragon_-_Pok%C3%A9mon_Legends_Z-A.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B10/EmmaZANoobXL_byKonan.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B10/Megurine_Lukavoc_Illus.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B10/SuccubusSMT-illu-bsinky-v1.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B10/canari_pokemon_ilxl_goofy.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/Kanade-20.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/LumeraFE-illu-bsinky-v1.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/XL-ExcelWalter-ILXL-06.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/kirito.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/issei%20v2.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/naofumi_iwatani_ilxl.safetensors"
 )
 
 VAE_MODELS=(
