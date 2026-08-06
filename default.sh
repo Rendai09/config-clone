@@ -47,6 +47,11 @@ CHECKPOINT_MODELS=(
     "https://huggingface.co/FallenIncursio/Skirkscendance/resolve/main/Skirkscendance_v1.safetensors"
     "https://huggingface.co/Manityro/Vermilion-Anima/resolve/main/Vermilion-0.1-AnimaV1.safetensors"
     "https://huggingface.co/Manityro/Hoseki_LustrousMix_AnimaBaseV1_v1/resolve/main/Hoseki_LustrousMix_animaBaseV1_v1.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/MCheckpoint/sweetBapsRimixStylized_animaV10.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/MCheckpoint/milfSoup_v2Anima.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/MCheckpoint/oneObsessionAnima_v30.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/MCheckpoint/oneObsessionBranch_matureAnimaV1.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/MCheckpoint/rdbtAnime_v2Base.safetensors"
 )
 
 UNET_MODELS=(
