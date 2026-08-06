@@ -35,15 +35,18 @@ PIP_PACKAGES=(
 )
 
 EMBEDDINGS=(
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Smooth_Negative-neg.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/lazyneg.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/lazypos.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Smooth_Negative-neg.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/lazyneg.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/lazypos.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/SmoothNegativePony-neg.safetensors"
 )
 
 CHECKPOINT_MODELS=(
-    "https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/diffusion_models/anima-base-v1.0.safetensors"
+    #"https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/diffusion_models/anima-base-v1.0.safetensors"
     "https://huggingface.co/FallenIncursio/Animice_and_Doe/resolve/main/Animice_and_Doe_v1.safetensors"
+    "https://huggingface.co/FallenIncursio/Skirkscendance/resolve/main/Skirkscendance_v1.safetensors"
+    "https://huggingface.co/Manityro/Vermilion-Anima/resolve/main/Vermilion-0.1-AnimaV1.safetensors"
+    "https://huggingface.co/Manityro/Hoseki_LustrousMix_AnimaBaseV1_v1/resolve/main/Hoseki_LustrousMix_animaBaseV1_v1.safetensors"
 )
 
 UNET_MODELS=(
