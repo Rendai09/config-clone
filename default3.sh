@@ -75,64 +75,147 @@ CONTROLNET_MODELS=(
 TEXT_ENCODER_MODELS=(
     "https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/text_encoders/qwen_3_06b_base.safetensors"
 )
-
-### Đoạn code xử lý bên dưới (Đã tối ưu sang aria2c) ###
+### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
 function provisioning_start() {
-    # Cài đặt aria2 nếu chưa có
-    if ! command -v aria2c &> /dev/null; then
-        echo "Đang cài đặt aria2..."
-        apt-get update -y && apt-get install -y aria2
-    fi
+    provisioning_print_header
+    provisioning_get_apt_packages
+    provisioning_get_extensions
+    provisioning_get_pip_packages
+    
+    # Bổ sung các hàm gọi tải đầy đủ mọi loại model
+    provisioning_get_files "${A1111_DIR}/models/Stable-diffusion" "${CHECKPOINT_MODELS[@]}"
+    provisioning_get_files "${A1111_DIR}/models/Lora" "${LORA_MODELS[@]}"
+    provisioning_get_files "${A1111_DIR}/models/VAE" "${VAE_MODELS[@]}"
+    provisioning_get_files "${A1111_DIR}/models/ESRGAN" "${ESRGAN_MODELS[@]}"
+    provisioning_get_files "${A1111_DIR}/models/ControlNet" "${CONTROLNET_MODELS[@]}"
+    provisioning_get_files "${A1111_DIR}/embeddings" "${EMBEDDINGS[@]}"
+    provisioning_get_files "${A1111_DIR}/models/text_encoder" "${TEXT_ENCODER_MODELS[@]}"
+    provisioning_get_files "${A1111_DIR}" "${CONFIG_AND_STYLES[@]}"
 
-    DISK_GB_AVAILABLE=$(($(stat -f --format="%a*%S" /workspace) / 1024 / 1024 / 1024))
-    MAX_GB=$((DISK_GB_AVAILABLE - 5))
+    # Avoid git errors because we run as root but files are owned by 'user'
+    export GIT_CONFIG_GLOBAL=/tmp/temporary-git-config
+    git config --file $GIT_CONFIG_GLOBAL --add safe.directory '*'
 
-    echo "Dung lượng khả dụng: ${DISK_GB_AVAILABLE}GB (Giới hạn tải: ${MAX_GB}GB)"
+    # Start and exit because webui will probably require a restart
+    cd "${A1111_DIR}"
+    LD_PRELOAD=libtcmalloc_minimal.so.4 \
+        python launch.py \
+            --skip-python-version-check \
+            --no-download-sd-model \
+            --do-not-download-clip \
+            --no-half \
+            --port 17860 \
+            --exit
 
-    provisioning_get_models
-    echo "Phân đoạn tải hoàn tất!"
+    provisioning_print_end
 }
 
-function provisioning_get_models() {
-    if [[ -n $MAX_GB ]] && [[ $MAX_GB -gt 0 ]]; then
-        provisioning_get_files "${A1111_DIR}/models/Stable-diffusion" "${CHECKPOINT_MODELS[@]}"
-        provisioning_get_files "${A1111_DIR}/models/Lora" "${LORA_MODELS[@]}"
-        provisioning_get_files "${A1111_DIR}/models/VAE" "${VAE_MODELS[@]}"
-        provisioning_get_files "${A1111_DIR}/models/ESRGAN" "${ESRGAN_MODELS[@]}"
-        provisioning_get_files "${A1111_DIR}/models/ControlNet" "${CONTROLNET_MODELS[@]}"
-        provisioning_get_files "${A1111_DIR}/embeddings" "${EMBEDDINGS[@]}"
-        provisioning_get_files "${A1111_DIR}/models/text_encoder" "${TEXT_ENCODER_MODELS[@]}"
-        provisioning_get_files "${A1111_DIR}" "${CONFIG_AND_STYLES[@]}"
+function provisioning_get_apt_packages() {
+    if [[ -n $APT_PACKAGES ]]; then
+            sudo $APT_INSTALL ${APT_PACKAGES[@]}
+    fi
+}
+
+function provisioning_get_pip_packages() {
+    if [[ -n $PIP_PACKAGES ]]; then
+            pip install --no-cache-dir ${PIP_PACKAGES[@]}
+    fi
+}
+
+function provisioning_get_extensions() {
+    for repo in "${EXTENSIONS[@]}"; do
+        dir="${repo##*/}"
+        path="${A1111_DIR}/extensions/${dir}"
+        if [[ ! -d $path ]]; then
+            printf "Downloading extension: %s...\n" "${repo}"
+            git clone "${repo}" "${path}" --recursive
+        fi
+    done
+}
+
+function provisioning_get_files() {
+    if [[ -z $2 ]]; then return 1; fi
+    
+    dir="$1"
+    mkdir -p "$dir"
+    shift
+    arr=("$@")
+    printf "Downloading %s model(s) to %s...\n" "${#arr[@]}" "$dir"
+    for url in "${arr[@]}"; do
+        printf "Downloading: %s\n" "${url}"
+        provisioning_download "${url}" "${dir}"
+        printf "\n"
+    done
+}
+
+function provisioning_print_header() {
+    printf "\n##############################################\n#                                            #\n#          Provisioning container            #\n#                                            #\n#         This will take some time           #\n#                                            #\n# Your container will be ready on completion #\n#                                            #\n##############################################\n\n"
+}
+
+function provisioning_print_end() {
+    printf "\nProvisioning complete:  Application will start now\n\n"
+}
+
+function provisioning_has_valid_hf_token() {
+    [[ -n "$HF_TOKEN" ]] || return 1
+    url="https://huggingface.co/api/whoami-v2"
+
+    response=$(curl -o /dev/null -s -w "%{http_code}" -X GET "$url" \
+        -H "Authorization: Bearer $HF_TOKEN" \
+        -H "Content-Type: application/json")
+
+    if [ "$response" -eq 200 ]; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+function provisioning_has_valid_civitai_token() {
+    [[ -n "$CIVITAI_TOKEN" ]] || return 1
+    url="https://civitai.com/api/v1/models?hidden=1&limit=1"
+
+    response=$(curl -o /dev/null -s -w "%{http_code}" -X GET "$url" \
+        -H "Authorization: Bearer $CIVITAI_TOKEN" \
+        -H "Content-Type: application/json")
+
+    if [ "$response" -eq 200 ]; then
+        return 0
+    else
+        return 1
     fi
 }
 
 function provisioning_download() {
-    local dir=$1
-    shift
-    local arr=("$@")
-
+    if [[ -z "$1" ]]; then return 0; fi
+    
+    url="$1"
+    dir="$2"
+    
     mkdir -p "$dir"
-
-    for url in "${arr[@]}"; do
-        if [[ -z "$url" ]]; then continue; fi
-
-        # Tự động đính kèm Civitai Token nếu tải từ Civitai
-        if [[ "$url" == *"civitai.com"* ]] && [[ -n "$CIVITAI_TOKEN" ]] && [[ "$url" != *"?token="* ]]; then
+    
+    # Thêm Civitai Token nếu tải từ Civitai
+    if [[ "$url" == *"civitai.com"* ]] && [[ -n "$CIVITAI_TOKEN" ]] && [[ "$url" != *"?token="* ]]; then
+        if [[ "$url" == *"?"* ]]; then
+            url="${url}&token=${CIVITAI_TOKEN}"
+        else
             url="${url}?token=${CIVITAI_TOKEN}"
         fi
+    fi
 
-        echo "Đang tải (Aria2 16 luồng): $url vào $dir"
-        
-        # Tải bằng aria2c 16 connection song song
-        aria2c -x 16 -s 16 -k 1M \
-               --console-log-level=error \
-               --summary-interval=0 \
-               -c \
-               -d "$dir" \
-               "$url"
-    done
+    # Thêm Header Auth nếu tải từ HuggingFace
+    local auth_header=""
+    if [[ "$url" == *"huggingface.co"* ]] && [[ -n "$HF_TOKEN" ]]; then
+        auth_header="--header=Authorization: Bearer ${HF_TOKEN}"
+    fi
+
+    echo "Đang tải đa luồng (Aria2c): $url"
+    aria2c -x 16 -s 16 -k 1M \
+           --console-log-level=error \
+           --summary-interval=0 \
+           -c \
+           $auth_header \
+           -d "$dir" \
+           "$url"
 }
-
-# Chạy tiến trình
-provisioning_start
