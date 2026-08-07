@@ -215,12 +215,13 @@ function provisioning_download() {
         auth_header="--header=Authorization: Bearer ${HF_TOKEN}"
     fi
 
-    # Thêm User-Agent giả lập trình duyệt để vượt qua Cloudflare Anti-Bot
+    # Chuỗi User-Agent để vượt qua Cloudflare
     local user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 
-    echo "Đang tải đa luồng qua Aria2c: $url"
+    echo "Đang tải đa luồng (Aria2c): $url vào $dir"
     aria2c -x 8 -s 8 -k 1M \
            --user-agent="$user_agent" \
+           --content-disposition=true \
            --console-log-level=error \
            --summary-interval=0 \
            -c \
