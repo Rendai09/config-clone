@@ -1,46 +1,79 @@
 #!/bin/bash
 
-# Viết bởi Học AI - Tối ưu tải đa luồng 16 connection bằng aria2c
+source /venv/main/bin/activate
+# Đổi đường dẫn thư mục gốc sang Forge
+A1111_DIR=${WORKSPACE}/stable-diffusion-webui-forge
 
-# Tải các model mặc định khi tạo Instance
-DEFAULT_MODELS=false
+# Packages are installed after nodes so we can fix them...
 
-# Điền Token của bạn vào đây (Nếu tải file riêng tư hoặc Civitai yêu cầu login)
-HF_TOKEN=""
-CIVITAI_TOKEN=""
+APT_PACKAGES=(
+    #"package-1"
+    #"package-2"
+)
+# Thêm phần này để chứa link các file config/styles
+CONFIG_AND_STYLES=(
+    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/config/styles.csv"
+    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/config/config.json"
+    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/config/ui-config.json"
+)
+EXTENSIONS=(
+    "https://github.com/zanllp/sd-webui-infinite-image-browsing"
+    #"https://github.com/hako-mikan/sd-webui-regional-prompter"
+    "https://github.com/Haoming02/ADetailer-Neo"
+    #"https://github.com/SignalFlagZ/sd-webui-civbrowser"
+    "https://github.com/cataclisma/sd-webui-agent-scheduler-neo"
+    #"https://github.com/thomasasfk/sd-webui-aspect-ratio-helper"
+    "https://github.com/hako-mikan/sd-webui-supermerger"
+    "https://github.com/DominikDoom/a1111-sd-webui-tagcomplete"
+    #"https://github.com/richrobber2/canvas-zoom"
+    #"https://github.com/alemelis/sd-webui-ar"
+    "https://github.com/Haoming02/sd-forge-couple"
+)
 
-# Danh sách Model Checkpoint
+PIP_PACKAGES=(
+)
+
+EMBEDDINGS=(
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Smooth_Negative-neg.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/lazyneg.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/lazypos.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/SmoothNegativePony-neg.safetensors"
+)
+
 CHECKPOINT_MODELS=(
-    "https://civitai.com/api/download/models/294995" #Ví dụ Pony
+    #"https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/diffusion_models/anima-base-v1.0.safetensors"
+    #"https://huggingface.co/FallenIncursio/Animice_and_Doe/resolve/main/Animice_and_Doe_v1.safetensors"
+    #"https://huggingface.co/FallenIncursio/Skirkscendance/resolve/main/Skirkscendance_v1.safetensors"
+    #"https://huggingface.co/Manityro/Vermilion-Anima/resolve/main/Vermilion-0.1-AnimaV1.safetensors"
+    #"https://huggingface.co/Manityro/Hoseki_LustrousMix_AnimaBaseV1_v1/resolve/main/Hoseki_LustrousMix_animaBaseV1_v1.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/sweetBapsRimixStylized_animaV10.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/milfSoup_v2Anima.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/oneObsessionAnima_v30.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/oneObsessionBranch_matureAnimaV1.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/rdbtAnime_v2Base.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Holiskice3.safetensors"
 )
 
-# Danh sách CLIP / Text Encoder
-CLIP_MODELS=(
-)
-
-# Danh sách UNET
 UNET_MODELS=(
 )
 
-# Danh sách VAE
-VAE_MODELS=(
-    "https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors"
-)
-
-# Danh sách ControlNet
-CONTROLNET_MODELS=(
-)
-
-# Danh sách LoRA
 LORA_MODELS=(
 )
 
-# Danh sách ESRGAN / Upscaler
-ESRGAN_MODELS=(
+VAE_MODELS=(
+    "https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/vae/qwen_image_vae.safetensors"
 )
 
-# Danh sách Embeddings / Textual Inversion
-EMBEDDING_MODELS=(
+ESRGAN_MODELS=(
+    "https://huggingface.co/krauzerh/animesharpx4/resolve/main/4x-AnimeSharp.pth"
+    "https://huggingface.co/lokCX/4x-Ultrasharp/resolve/main/4x-UltraSharp.pth"
+)
+
+CONTROLNET_MODELS=(
+)
+
+TEXT_ENCODER_MODELS=(
+    "https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/text_encoders/qwen_3_06b_base.safetensors"
 )
 
 ### Đoạn code xử lý bên dưới (Đã tối ưu sang aria2c) ###
@@ -63,14 +96,14 @@ function provisioning_start() {
 
 function provisioning_get_models() {
     if [[ -n $MAX_GB ]] && [[ $MAX_GB -gt 0 ]]; then
-        provisioning_download "${CHECKPOINT_MODELS[@]}" "/workspace/ComfyUI/models/checkpoints"
-        provisioning_download "${CLIP_MODELS[@]}" "/workspace/ComfyUI/models/clip"
-        provisioning_download "${UNET_MODELS[@]}" "/workspace/ComfyUI/models/unet"
-        provisioning_download "${VAE_MODELS[@]}" "/workspace/ComfyUI/models/vae"
-        provisioning_download "${CONTROLNET_MODELS[@]}" "/workspace/ComfyUI/models/controlnet"
-        provisioning_download "${LORA_MODELS[@]}" "/workspace/ComfyUI/models/loras"
-        provisioning_download "${ESRGAN_MODELS[@]}" "/workspace/ComfyUI/models/upscale_models"
-        provisioning_download "${EMBEDDING_MODELS[@]}" "/workspace/ComfyUI/models/embeddings"
+        provisioning_get_files "${A1111_DIR}/models/Stable-diffusion" "${CHECKPOINT_MODELS[@]}"
+        provisioning_get_files "${A1111_DIR}/models/Lora" "${LORA_MODELS[@]}"
+        provisioning_get_files "${A1111_DIR}/models/VAE" "${VAE_MODELS[@]}"
+        provisioning_get_files "${A1111_DIR}/models/ESRGAN" "${ESRGAN_MODELS[@]}"
+        provisioning_get_files "${A1111_DIR}/models/ControlNet" "${CONTROLNET_MODELS[@]}"
+        provisioning_get_files "${A1111_DIR}/embeddings" "${EMBEDDINGS[@]}"
+        provisioning_get_files "${A1111_DIR}/models/text_encoder" "${TEXT_ENCODER_MODELS[@]}"
+        provisioning_get_files "${A1111_DIR}" "${CONFIG_AND_STYLES[@]}"
     fi
 }
 
