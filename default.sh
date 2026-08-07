@@ -19,16 +19,15 @@ CONFIG_AND_STYLES=(
 EXTENSIONS=(
     "https://github.com/zanllp/sd-webui-infinite-image-browsing"
     #"https://github.com/hako-mikan/sd-webui-regional-prompter"
-    #"https://github.com/Bing-su/adetailer"
+    "https://github.com/Haoming02/ADetailer-Neo"
     #"https://github.com/SignalFlagZ/sd-webui-civbrowser"
-    "https://github.com/ArtVentureX/sd-webui-agent-scheduler"
+    "https://github.com/cataclisma/sd-webui-agent-scheduler-neo"
     #"https://github.com/thomasasfk/sd-webui-aspect-ratio-helper"
     "https://github.com/hako-mikan/sd-webui-supermerger"
     "https://github.com/DominikDoom/a1111-sd-webui-tagcomplete"
     #"https://github.com/richrobber2/canvas-zoom"
     #"https://github.com/alemelis/sd-webui-ar"
     "https://github.com/Haoming02/sd-forge-couple"
-    #"https://github.com/FallenIncursio/arcenciel-link-webui"
 )
 
 PIP_PACKAGES=(
