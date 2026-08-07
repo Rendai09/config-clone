@@ -34,10 +34,10 @@ PIP_PACKAGES=(
 )
 
 EMBEDDINGS=(
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Smooth_Negative-neg.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/lazyneg.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/lazypos.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/SmoothNegativePony-neg.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Smooth_Negative-neg.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/lazyneg.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/lazypos.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/SmoothNegativePony-neg.safetensors"
 )
 
 CHECKPOINT_MODELS=(
@@ -46,22 +46,26 @@ CHECKPOINT_MODELS=(
     #"https://huggingface.co/FallenIncursio/Skirkscendance/resolve/main/Skirkscendance_v1.safetensors"
     #"https://huggingface.co/Manityro/Vermilion-Anima/resolve/main/Vermilion-0.1-AnimaV1.safetensors"
     #"https://huggingface.co/Manityro/Hoseki_LustrousMix_AnimaBaseV1_v1/resolve/main/Hoseki_LustrousMix_animaBaseV1_v1.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/sweetBapsRimixStylized_animaV10.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/milfSoup_v2Anima.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/oneObsessionAnima_v30.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/oneObsessionBranch_matureAnimaV1.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/rdbtAnime_v2Base.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Holiskice3.safetensors"
+    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/VercalionRING_v1.safetensors"
+    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/StellarRINGV2.1_BAKED.safetensors"
+    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/HoliceSwession.safetensors"
 )
 
 UNET_MODELS=(
 )
 
 LORA_MODELS=(
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/LumeraFE-illu-bsinky-v1.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/Kanade-20.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/XL-ExcelWalter-ILXL-06.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/kirito.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/issei%20v2.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/naofumi_iwatani_ilxl.safetensors"
 )
 
 VAE_MODELS=(
     "https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/vae/qwen_image_vae.safetensors"
+    "https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
 )
 
 ESRGAN_MODELS=(
@@ -188,17 +192,49 @@ function provisioning_has_valid_civitai_token() {
 }
 
 function provisioning_download() {
-    if [[ -n $HF_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
-        auth_token="$HF_TOKEN"
-    elif 
-        [[ -n $CIVITAI_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
-        auth_token="$CIVITAI_TOKEN"
+    if ! command -v aria2c &> /dev/null; then
+        apt-get update -y && apt-get install -y aria2
     fi
-    if [[ -n $auth_token ]];then
-        wget --header="Authorization: Bearer $auth_token" -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
-    else
-        wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+
+    if [[ -z "$1" ]]; then return 0; fi
+    
+    url="$1"
+    dir="$2"
+    
+    mkdir -p "$dir"
+    
+    if [[ "$url" == *"civitai.com"* ]] && [[ -n "$CIVITAI_TOKEN" ]] && [[ "$url" != *"?token="* ]]; then
+        if [[ "$url" == *"?"* ]]; then
+            url="${url}&token=${CIVITAI_TOKEN}"
+        else
+            url="${url}?token=${CIVITAI_TOKEN}"
+        fi
     fi
+
+    local auth_header=""
+    if [[ "$url" == *"huggingface.co"* ]] && [[ -n "$HF_TOKEN" ]]; then
+        auth_header="--header=Authorization: Bearer ${HF_TOKEN}"
+    fi
+
+    # Lấy tên file thật từ URL gốc (phần sau /resolve/main/)
+    local filename
+    filename=$(basename "$url" | sed 's/?.*$//')
+
+    local user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+
+    echo "Đang tải: $url -> $dir/$filename"
+    aria2c -x 8 -s 8 -k 1M \
+           --user-agent="$user_agent" \
+           --content-disposition=false \
+           --out="$filename" \
+           --auto-file-renaming=false \
+           --allow-overwrite=true \
+           --console-log-level=error \
+           --summary-interval=0 \
+           -c \
+           $auth_header \
+           -d "$dir" \
+           "$url"
 }
 
 if [[ ! -f /.noprovisioning ]]; then
