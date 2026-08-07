@@ -188,7 +188,6 @@ function provisioning_has_valid_civitai_token() {
 }
 
 function provisioning_download() {
-    # Cài đặt aria2c nếu máy chủ Vast.ai chưa có
     if ! command -v aria2c &> /dev/null; then
         apt-get update -y && apt-get install -y aria2
     fi
@@ -200,7 +199,6 @@ function provisioning_download() {
     
     mkdir -p "$dir"
     
-    # Tự động nối Civitai Token nếu tải từ Civitai
     if [[ "$url" == *"civitai.com"* ]] && [[ -n "$CIVITAI_TOKEN" ]] && [[ "$url" != *"?token="* ]]; then
         if [[ "$url" == *"?"* ]]; then
             url="${url}&token=${CIVITAI_TOKEN}"
@@ -209,19 +207,24 @@ function provisioning_download() {
         fi
     fi
 
-    # Tự động thêm Header Auth nếu tải từ HuggingFace
     local auth_header=""
     if [[ "$url" == *"huggingface.co"* ]] && [[ -n "$HF_TOKEN" ]]; then
         auth_header="--header=Authorization: Bearer ${HF_TOKEN}"
     fi
 
-    # Chuỗi User-Agent để vượt qua Cloudflare
+    # Lấy tên file thật từ URL gốc (phần sau /resolve/main/)
+    local filename
+    filename=$(basename "$url" | sed 's/?.*$//')
+
     local user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 
-    echo "Đang tải đa luồng (Aria2c): $url vào $dir"
+    echo "Đang tải: $url -> $dir/$filename"
     aria2c -x 8 -s 8 -k 1M \
            --user-agent="$user_agent" \
-           --content-disposition=true \
+           --content-disposition=false \
+           --out="$filename" \
+           --auto-file-renaming=false \
+           --allow-overwrite=true \
            --console-log-level=error \
            --summary-interval=0 \
            -c \
