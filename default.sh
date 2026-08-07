@@ -23,7 +23,7 @@ EXTENSIONS=(
     #"https://github.com/SignalFlagZ/sd-webui-civbrowser"
     "https://github.com/cataclisma/sd-webui-agent-scheduler-neo"
     #"https://github.com/thomasasfk/sd-webui-aspect-ratio-helper"
-    "https://github.com/hako-mikan/sd-webui-supermerger"
+    #"https://github.com/hako-mikan/sd-webui-supermerger"
     "https://github.com/DominikDoom/a1111-sd-webui-tagcomplete"
     #"https://github.com/richrobber2/canvas-zoom"
     #"https://github.com/alemelis/sd-webui-ar"
