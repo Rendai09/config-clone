@@ -188,6 +188,11 @@ function provisioning_has_valid_civitai_token() {
 }
 
 function provisioning_download() {
+    # Cài đặt aria2c nếu máy chủ Vast.ai chưa có
+    if ! command -v aria2c &> /dev/null; then
+        apt-get update -y && apt-get install -y aria2
+    fi
+
     if [[ -z "$1" ]]; then return 0; fi
     
     url="$1"
@@ -195,7 +200,7 @@ function provisioning_download() {
     
     mkdir -p "$dir"
     
-    # Thêm Civitai Token nếu tải từ Civitai
+    # Tự động nối Civitai Token nếu tải từ Civitai
     if [[ "$url" == *"civitai.com"* ]] && [[ -n "$CIVITAI_TOKEN" ]] && [[ "$url" != *"?token="* ]]; then
         if [[ "$url" == *"?"* ]]; then
             url="${url}&token=${CIVITAI_TOKEN}"
@@ -204,13 +209,13 @@ function provisioning_download() {
         fi
     fi
 
-    # Thêm Header Auth nếu tải từ HuggingFace
+    # Tự động thêm Header Auth nếu tải từ HuggingFace
     local auth_header=""
     if [[ "$url" == *"huggingface.co"* ]] && [[ -n "$HF_TOKEN" ]]; then
         auth_header="--header=Authorization: Bearer ${HF_TOKEN}"
     fi
 
-    echo "Đang tải đa luồng (Aria2c): $url"
+    echo "Đang tải đa luồng tốc độ cao (Aria2c 16 connections): $url"
     aria2c -x 16 -s 16 -k 1M \
            --console-log-level=error \
            --summary-interval=0 \
@@ -219,3 +224,7 @@ function provisioning_download() {
            -d "$dir" \
            "$url"
 }
+
+if [[ ! -f /.noprovisioning ]]; then
+    provisioning_start
+fi
