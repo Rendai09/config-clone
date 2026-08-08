@@ -23,7 +23,7 @@ EXTENSIONS=(
     #"https://github.com/SignalFlagZ/sd-webui-civbrowser"
     "https://github.com/cataclisma/sd-webui-agent-scheduler-neo"
     #"https://github.com/thomasasfk/sd-webui-aspect-ratio-helper"
-    "https://github.com/hako-mikan/sd-webui-supermerger"
+    #"https://github.com/hako-mikan/sd-webui-supermerger"
     "https://github.com/DominikDoom/a1111-sd-webui-tagcomplete"
     #"https://github.com/richrobber2/canvas-zoom"
     #"https://github.com/alemelis/sd-webui-ar"
@@ -34,10 +34,10 @@ PIP_PACKAGES=(
 )
 
 EMBEDDINGS=(
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Smooth_Negative-neg.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/lazyneg.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/lazypos.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/SmoothNegativePony-neg.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Smooth_Negative-neg.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/lazyneg.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/lazypos.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/SmoothNegativePony-neg.safetensors"
 )
 
 CHECKPOINT_MODELS=(
@@ -46,19 +46,28 @@ CHECKPOINT_MODELS=(
     #"https://huggingface.co/FallenIncursio/Skirkscendance/resolve/main/Skirkscendance_v1.safetensors"
     #"https://huggingface.co/Manityro/Vermilion-Anima/resolve/main/Vermilion-0.1-AnimaV1.safetensors"
     #"https://huggingface.co/Manityro/Hoseki_LustrousMix_AnimaBaseV1_v1/resolve/main/Hoseki_LustrousMix_animaBaseV1_v1.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Holiskice3.safetensors"
-    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/StellarRINGV2.1_BAKED.safetensors"
     "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/VercalionRING_v1.safetensors"
+    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/StellarRINGV2.1_BAKED.safetensors"
+    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/ANIMAHolice_v08.safetensors"
 )
 
 UNET_MODELS=(
 )
 
 LORA_MODELS=(
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/LumeraFE-illu-bsinky-v1.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/Kanade-20.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/XL-ExcelWalter-ILXL-06.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/kirito.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/issei%20v2.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/naofumi_iwatani_ilxl.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/ANIMA/fairy_zzzv2.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/ANIMA/fairyzzz_anima_v1.safetensors"
 )
 
 VAE_MODELS=(
     "https://huggingface.co/circlestone-labs/Anima/resolve/main/split_files/vae/qwen_image_vae.safetensors"
+    "https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
 )
 
 ESRGAN_MODELS=(
