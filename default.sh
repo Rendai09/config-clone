@@ -61,6 +61,8 @@ LORA_MODELS=(
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/kirito.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/issei%20v2.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/naofumi_iwatani_ilxl.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/ANIMA/fairy_zzzv2.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/ANIMA/fairyzzz_anima_v1.safetensors"
 )
 
 VAE_MODELS=(
