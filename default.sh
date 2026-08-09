@@ -55,14 +55,13 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/LumeraFE-illu-bsinky-v1.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/Kanade-20.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/XL-ExcelWalter-ILXL-06.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/kirito.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/issei%20v2.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B11/naofumi_iwatani_ilxl.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/ANIMA/fairy_zzzv2.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/ANIMA/fairyzzz_anima_v1.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B12/RoseQuartzIllustrious1.0JLFO.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B12/dcsorceress-illu-nvwls-v1.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B12/recluse-er-richy-v1_ixl.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B12/whitedillust.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/naofumi_iwatani_ilxl.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/issei%20v2.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/kirito.safetensors"
 )
 
 VAE_MODELS=(
