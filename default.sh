@@ -59,9 +59,9 @@ LORA_MODELS=(
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B12/dcsorceress-illu-nvwls-v1.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B12/recluse-er-richy-v1_ixl.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B12/whitedillust.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/naofumi_iwatani_ilxl.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/issei%20v2.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/kirito.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/naofumi_iwatani_ilxl.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/issei_v2.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/kirito.safetensors"
 )
 
 VAE_MODELS=(
