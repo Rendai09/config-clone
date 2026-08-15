@@ -224,7 +224,7 @@ function provisioning_download() {
     local user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 
     echo "Đang tải: $url -> $dir/$filename"
-    aria2c -x 8 -s 8 -k 1M \
+    aria2c -x 16 -s 16 -k 1M \
            --user-agent="$user_agent" \
            --content-disposition=false \
            --out="$filename" \
