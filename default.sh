@@ -55,10 +55,11 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B12/RoseQuartzIllustrious1.0JLFO.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B12/dcsorceress-illu-nvwls-v1.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B14/RoseQuartzIllustrious1.0JLFO.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B14/dcsorceress-illu-nvwls-v1.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B12/recluse-er-richy-v1_ixl.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B12/whitedillust.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B12/Jesse_Anderson__Johann_Andersen__Judai_Yuki__Jaden_Yuki_-_Yu-Gi-Oh_GX_-_Illustrious_Commission.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/naofumi_iwatani_ilxl.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/issei_v2.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/kirito.safetensors"
