@@ -59,9 +59,17 @@ LORA_MODELS=(
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B14/dcsorceress-illu-nvwls-v1.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B15/recluse-er-richy-v1_ixl.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B1N/whitedillust.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/naofumi_iwatani_ilxl.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/naofumi_iwatani_ilxl.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/issei_v2.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/kirito.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B15/Cathleen%20Bate%20(Star%20and%20Stripe)%20-%20Illu.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B15/Cathleen_Bate_Star_and_Stripe_-_My_Hero_Academia_waiNSFW.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B15/HomelanderC.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B15/HomelanderD.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B15/Homelander__The_Boys.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B15/Motoyasu_kitamura-000008.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B15/p5sae-ill.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B15/satellizer-illu-nvwls-v1.safetensors"
 )
 
 VAE_MODELS=(
