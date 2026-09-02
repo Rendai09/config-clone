@@ -73,6 +73,8 @@ LORA_MODELS=(
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B15/privaty-nikke-richy-v1_anima.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B15/Risa_Wakatsuki.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B15/Risa_Wakatsuki-Bakunyuu_Bomb_ix.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B15/Elesis.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B15/Elesis_Elsword_IL-03.safetensors"
 )
 
 VAE_MODELS=(
