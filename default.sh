@@ -64,8 +64,9 @@ LORA_MODELS=(
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/kirito.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B15/Motoyasu_kitamura-000008.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B15/p5sae-ill.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B15/Elesis.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B15/Elesis_Elsword_IL-03.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B15/satellizer-illu-nvwls-v1.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B15/Elesis.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B15/Elesis_Elsword_IL-03.safetensors"
 )
 
 VAE_MODELS=(
