@@ -62,16 +62,13 @@ LORA_MODELS=(
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/naofumi_iwatani_ilxl.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/issei_v2.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/kirito.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B16/zibai_genshin_impact_ilxl_goofy.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B16/BusujimaSaeko_Extra_Dwnsty_IL.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B16/JN_Saeko_Busujima_Anima.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B16/Sysdeep_Akeno%20-%20Anima%20v1.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B16/Zibai_2_IL-000014.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B16/akeno-dxd-richy-v1_ixl.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B16/dcsorceress-illu-nvwls-v1.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B16/edgDangerousBeastISLv1.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B16/mash-kyrielight-halloween-costume-illustriousxl-lora-nochekaiser.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B16/recluse-er-richy-v1_ixl.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/cloud.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/Char-Angelica_Rafa_Redgrave-V1-IL.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/Cloud_Strife_ILL.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/TenSura_LuminousValentine_IlluXL.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/clive-X.safetensors"
 )
 
 VAE_MODELS=(
