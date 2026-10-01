@@ -69,6 +69,9 @@ LORA_MODELS=(
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/Cloud_Strife_ILL.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/TenSura_LuminousValentine_IlluXL.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/clive-X.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/cowpens_IL_v1.0.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/cowpens_(azur%20lane)_anima-000010.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/cowpens_AN.safetensors"
 )
 
 VAE_MODELS=(
