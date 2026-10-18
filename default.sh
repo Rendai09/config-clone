@@ -62,15 +62,15 @@ LORA_MODELS=(
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/naofumi_iwatani_ilxl.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/issei_v2.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/kirito.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B16/dcsorceress-illu-nvwls-v1.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B16/recluse-er-richy-v1_ixl.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/ogsangelica_ANIMA_V1.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/ANI-FF16Cl1v3A2.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/cloud.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/Char-Angelica_Rafa_Redgrave-V1-IL.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/Cloud_Strife_ILL.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/TenSura_LuminousValentine_IlluXL.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/clive-X.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B16/CinderAnima.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B16/salem-anima-lora-nochekaiser.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/ANI-FFCl0ud.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/luminous-valentine-ona-anima-lora-nochekaiser.safetensors"
 )
 
 VAE_MODELS=(
