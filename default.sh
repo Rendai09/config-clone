@@ -48,9 +48,10 @@ CHECKPOINT_MODELS=(
     #"https://huggingface.co/Manityro/Hoseki_LustrousMix_AnimaBaseV1_v1/resolve/main/Hoseki_LustrousMix_animaBaseV1_v1.safetensors"
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/VercalionRING_v1.safetensors"
     "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/StellarRINGV2.1_BAKED.safetensors"
-    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/ANIMAHolice_v08.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/M09/DreamilkMature02.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/M09/westernpulse37.safetensors"
+    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Holice/ANIMAHolice_v08.safetensors"
+    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Holice/ANIMAHolice_v12.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/M09/DreamilkMature02.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/M09/westernpulse37.safetensors"
 )
 
 UNET_MODELS=(
