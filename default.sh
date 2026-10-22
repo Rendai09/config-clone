@@ -49,14 +49,14 @@ CHECKPOINT_MODELS=(
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/VercalionRING_v1.safetensors"
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/StellarRINGV2.1_BAKED.safetensors"
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/ANIMAHolice_v08.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/M09/animaNoctAnimeMix_v3029B_fp8.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/M09/ccDreamIslandMature_v10.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/M09/matureMilkAnima_v10.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/M09/someMergesWithJANIMA_animacustom.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/M09/westernMixAnimaV30_v30.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/M09/animapulseAnima_v11.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/M09/animage_v10.safetensors"
-    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/M09/prefectAnima_v10.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/M09/animaNoctAnimeMix_v3029B_fp8.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/M09/ccDreamIslandMature_v10.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/M09/matureMilkAnima_v10.safetensors"
+    #"https://huggingface.co/Rendai/ClondeModel/resolve/main/M09/someMergesWithJANIMA_animacustom.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/M09/westernMixAnimaV30_v30.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/M09/animapulseAnima_v11.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/M09/animage_v10.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/M09/prefectAnima_v10.safetensors"
 )
 
 UNET_MODELS=(
