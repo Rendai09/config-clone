@@ -65,15 +65,13 @@ LORA_MODELS=(
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/naofumi_iwatani_ilxl.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/issei_v2.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/kirito.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/ogsangelica_ANIMA_V1.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/ANI-FF16Cl1v3A2.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/cloud.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/Char-Angelica_Rafa_Redgrave-V1-IL.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/Cloud_Strife_ILL.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/TenSura_LuminousValentine_IlluXL.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/clive-X.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/ANI-FFCl0ud.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B17/luminous-valentine-ona-anima-lora-nochekaiser.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B18/Ade_Agent_Bunny2_(Anima)_Lavender234.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B18/BashinLora.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B18/JauneArc.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B18/Pyrrha_Nikos_Anima_epoch_5.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B18/character_huyan_zhuo.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B18/nikke_velvet_sensual_rabbit_anima-rift1000.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B18/shinomiya_mai.safetensors"
 )
 
 VAE_MODELS=(
