@@ -46,7 +46,7 @@ CHECKPOINT_MODELS=(
     #"https://huggingface.co/FallenIncursio/Skirkscendance/resolve/main/Skirkscendance_v1.safetensors"
     #"https://huggingface.co/Manityro/Vermilion-Anima/resolve/main/Vermilion-0.1-AnimaV1.safetensors"
     #"https://huggingface.co/Manityro/Hoseki_LustrousMix_AnimaBaseV1_v1/resolve/main/Hoseki_LustrousMix_animaBaseV1_v1.safetensors"
-    #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/VercalionRING_v1.safetensors"
+    "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/VercalionRING_v1.safetensors"
     "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/StellarRINGV2.1_BAKED.safetensors"
     #"https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Holice/ANIMAHolice_v08.safetensors"
     "https://huggingface.co/Rendai/RandeiTheWitchModel/resolve/main/Holice/ANIMAHolice_v12.safetensors"
@@ -66,12 +66,13 @@ LORA_MODELS=(
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/issei_v2.safetensors"
     #"https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/BIG3/kirito.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B18/Ade_Agent_Bunny2_(Anima)_Lavender234.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B18/BashinLora.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B18/JauneArc.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B18/Pyrrha_Nikos_Anima_epoch_5.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B18/character_huyan_zhuo.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B19/Leonie_Fevre_iLL_KK77.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B19/LilyEverhart-10.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B19/N_-_Pok%C3%A9mon_-_Illustrious_Commission.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B19/feleonie-illu-nvwls-v1.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B18/nikke_velvet_sensual_rabbit_anima-rift1000.safetensors"
-    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B18/shinomiya_mai.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B19/n_pokemon_V3.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B19/palworld_lily_anima.safetensors"
 )
 
 VAE_MODELS=(
