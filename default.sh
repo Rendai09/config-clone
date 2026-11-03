@@ -29,6 +29,7 @@ EXTENSIONS=(
     #"https://github.com/alemelis/sd-webui-ar"
     "https://github.com/Haoming02/sd-forge-couple"
     "https://github.com/hako-mikan/sd-webui-supermerger"
+    "https://huggingface.co/datasets/Rendai/CloneData/resolve/main/config/forgeNeoExtensionTwo_v12.zip"
 )
 
 PIP_PACKAGES=(
