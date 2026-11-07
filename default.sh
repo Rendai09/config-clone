@@ -76,6 +76,7 @@ LORA_MODELS=(
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B19/n_pokemon_V3.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B19/palworld_lily_anima.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B18/Pyrrha_Nikos_Anima_epoch_5.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B19/anima_leonie_pinelli_v1.safetensors"
 )
 
 VAE_MODELS=(
