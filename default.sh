@@ -77,6 +77,9 @@ LORA_MODELS=(
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B19/palworld_lily_anima.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B18/Pyrrha_Nikos_Anima_epoch_5.safetensors"
     "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B19/anima_leonie_pinelli_v1.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B20/Infinite_Mage__Clay_Marcia.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B20/Infinite_Mage__Reina_Ogent.safetensors"
+    "https://huggingface.co/Rendai/ClondeModel/resolve/main/Lora/B20/infinite_mage_il_1_d16.safetensors"
 )
 
 VAE_MODELS=(
